@@ -1,0 +1,12 @@
+Browser console capture — cached Interactive Auto reload
+Captured: 2026-08-31
+URL: http://localhost:5058/counter?detailed=true
+Observation window: full navigation plus 8 seconds
+Runtime proof: 205 .wasm resources; no /_blazor/negotiate resource
+Console/page-error event count: 2 (1 info, 1 error)
+
+INFO  Debugging hotkey: Shift+Alt+D (when application has focus)
+ERROR Cannot read properties of null (reading 'addEventListener')
+      at /Components/Layout/ReconnectModal.abdmv1u4y3.razor.js:3:16
+
+Output volume matched the normal cached WebAssembly request. This is not evidence for the first-visit Server-backed Auto case.

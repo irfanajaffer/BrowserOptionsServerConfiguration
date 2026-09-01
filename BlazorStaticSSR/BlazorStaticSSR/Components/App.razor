@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <BasePath />
+    <ResourcePreloader />
+    <link rel="stylesheet" href="@Assets["lib/bootstrap/dist/css/bootstrap.min.css"]" />
+    <link rel="stylesheet" href="@Assets["app.css"]" />
+    <link rel="stylesheet" href="@Assets["BlazorStaticSSR.styles.css"]" />
+    <ImportMap />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <HeadOutlet />
+</head>
+
+<body>
+    <ConfigureBrowser Options="@RequestBrowserOptions" />
+    <Routes />
+    <script src="@Assets["js/preserve-test.js"]"></script>
+    <script src="@Assets["_framework/blazor.web.js"]" autostart="false"></script>
+    @* Preview 7 doesn't emit WithBrowserOptions into the response, so pass the same
+       test setting directly until that preview issue is fixed. *@
+    <script>Blazor.start({ ssr: { disableDomPreservation: @(Program.PreserveDom ? "false" : "true") } });</script>
+</body>
+
+</html>
+
+@code {
+    [CascadingParameter]
+    private HttpContext HttpContext { get; set; } = default!;
+
+    private BrowserOptions RequestBrowserOptions => new()
+    {
+        LogLevel = IsDetailedRequest ? LogLevel.Trace : LogLevel.Information
+    };
+
+    private bool IsDetailedRequest =>
+        HttpContext.Request.Query.TryGetValue("detailed", out var queryValue) &&
+            string.Equals(queryValue, "true", StringComparison.OrdinalIgnoreCase) ||
+        HttpContext.Request.Headers.TryGetValue("X-Detailed-Logging", out var headerValue) &&
+            string.Equals(headerValue, "true", StringComparison.OrdinalIgnoreCase);
+}

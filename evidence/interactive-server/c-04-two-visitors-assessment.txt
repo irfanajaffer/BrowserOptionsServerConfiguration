@@ -1,0 +1,60 @@
+C-04 two concurrent Server visitors — evidence assessment
+Captured and assessed: 2026-08-31
+Application: BlazorServerApp
+Capture URL/port: https://localhost:7010
+Overall result: INCONCLUSIVE for the full product claim
+Fixture assertion: PASS
+
+Concurrent normal visitor:
+- URL: /counter
+- Variant displayed: normal
+- Per-request LogLevel supplied to ConfigureBrowser: Information
+- Request ID: 0HNO75OVP5DG1:00000001
+- Interactive result: Current count changed from 0 to 1
+- SignalR negotiate returned HTTP 200 and a WebSocket connected.
+
+Concurrent detailed visitor:
+- URL: /counter?detailed=true
+- Variant displayed: detailed
+- Per-request LogLevel supplied to ConfigureBrowser: Trace
+- Request ID: 0HNO75OVP5DG1:00000017
+- Interactive result: Current count changed from 0 to 1
+- SignalR negotiate returned HTTP 200 and a different WebSocket connected.
+
+What passes:
+- The normal and detailed requests were open concurrently.
+- Each request retained the expected request-specific value.
+- Distinct request IDs and WebSocket connection IDs were observed.
+- Both pages were independently interactive.
+- No cross-request leakage was visible in the diagnostic values.
+
+Why the full product claim remains inconclusive:
+- The banner proves the value supplied to ConfigureBrowser for each request, not
+  the merged value read back from browser startup.
+- SDK 11.0.100-preview.7.26381.103 does not expose the documented
+  BrowserOptions.GetBrowserOptions(HttpContext) overload, so effective options
+  could not be read back with that API.
+- The Trace visitor emitted the same Information connection messages as the
+  Information visitor. Distinct effective browser logging behavior was not
+  observable.
+- The captures came from two concurrently open pages, but do not independently
+  prove separate browser profiles or InPrivate storage contexts.
+- HAR files were not captured and must not be inferred from the console records.
+
+Retained evidence:
+- c-04-two-visitors.png: side-by-side normal and detailed page capture
+- c-04-normal.png: normal request page capture
+- c-04-detailed.png: detailed request page capture
+- c-04-normal-console.txt: normal request console/network summary
+- c-04-detailed-console.txt: detailed request console/network summary
+- c-04-test-procedure.md: repeatable scenario procedure and criteria
+
+Known unrelated page error in both runs:
+- ReconnectModal.razor.js attempted to call addEventListener on null.
+
+Conclusion:
+The prepared fixture and evidence pass the server-side per-request isolation
+assertion. They are not sufficient to claim that each browser effectively
+received and applied a distinct LogLevel because browser output did not differ
+and effective API readback is unavailable in the pinned SDK. Keep C-04 marked
+Inconclusive unless separate effective-browser evidence is obtained.

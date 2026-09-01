@@ -1,0 +1,42 @@
+# .NET build output
+**/bin/
+**/obj/
+
+# Visual Studio and user-specific settings
+.vs/
+**/.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Node.js dependencies and logs
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Browser automation state and transient test output
+**/.chrome-profile/
+test-results/
+playwright-report/
+blob-report/
+
+# IDE and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+
+# Local logs (curated evidence logs are explicitly retained)
+*.log
+!evidence/**/*.log

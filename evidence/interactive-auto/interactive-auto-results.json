@@ -1,0 +1,1731 @@
+{
+  "testedAt": "2026-09-01T07:51:51.510Z",
+  "baseUrl": "http://localhost:5058",
+  "build": "Pass",
+  "cachedReload": {
+    "status": "Pass",
+    "countAfterServerShutdown": "Current count: 1",
+    "clientWasmResource": "http://localhost:5058/_framework/BlazorAppAuto.Client.eelu724ymr.wasm",
+    "clientWasmCached": true,
+    "frameworkResponsesCaptured": 213
+  },
+  "reconnectBehavior": {
+    "status": "Pass",
+    "reconnectDialogVisible": false,
+    "observationAfterServerShutdownMs": 6500
+  },
+  "clientErrors": [],
+  "cachedPerformance": [
+    {
+      "url": "http://localhost:5058/_framework/blazor.web.dno4xfe4w5.js",
+      "initiatorType": "script",
+      "transferSize": 236295,
+      "encodedBodySize": 235995,
+      "decodedBodySize": 235927,
+      "duration": 53.4
+    },
+    {
+      "url": "http://localhost:5058/_framework/Microsoft.DotNet.HotReload.WebAssembly.Browser.99zm1jdh75.lib.module.js",
+      "initiatorType": "script",
+      "transferSize": 300,
+      "encodedBodySize": 0,
+      "decodedBodySize": 0,
+      "duration": 5.5
+    },
+    {
+      "url": "http://localhost:5058/_framework/dotnet.6qeeekn01c.js",
+      "initiatorType": "script",
+      "transferSize": 300,
+      "encodedBodySize": 0,
+      "decodedBodySize": 0,
+      "duration": 7.1
+    },
+    {
+      "url": "http://localhost:5058/_framework/dotnet.runtime.u7u1yxqnoc.js",
+      "initiatorType": "script",
+      "transferSize": 57882,
+      "encodedBodySize": 57582,
+      "decodedBodySize": 197325,
+      "duration": 34.5
+    },
+    {
+      "url": "http://localhost:5058/_framework/dotnet.native.j4essksm1v.js",
+      "initiatorType": "script",
+      "transferSize": 31361,
+      "encodedBodySize": 31061,
+      "decodedBodySize": 121713,
+      "duration": 32
+    },
+    {
+      "url": "http://localhost:5058/_framework/dotnet.native.5tuvvxitcf.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 1254239,
+      "encodedBodySize": 1253939,
+      "decodedBodySize": 3154340,
+      "duration": 447.2
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Runtime.InteropServices.JavaScript.filmu8kzst.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 32950,
+      "decodedBodySize": 80665,
+      "duration": 9.5
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Private.CoreLib.je2iqy740j.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 1738894,
+      "decodedBodySize": 5387549,
+      "duration": 456.7
+    },
+    {
+      "url": "http://localhost:5058/_framework/BlazorAppAuto.Client.7h03ruqnhz.pdb",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 9876,
+      "decodedBodySize": 16192,
+      "duration": 7.6
+    },
+    {
+      "url": "http://localhost:5058/_framework/Microsoft.AspNetCore.Authorization.1s0zlijjbt.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 20712,
+      "decodedBodySize": 46361,
+      "duration": 7.8
+    },
+    {
+      "url": "http://localhost:5058/_framework/Microsoft.AspNetCore.Components.fnu8mj9qsn.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 160198,
+      "decodedBodySize": 395545,
+      "duration": 39.3
+    },
+    {
+      "url": "http://localhost:5058/_framework/Microsoft.AspNetCore.Components.Forms.frurgradkk.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 22739,
+      "decodedBodySize": 49433,
+      "duration": 10.4
+    },
+    {
+      "url": "http://localhost:5058/_framework/Microsoft.AspNetCore.Components.Web.vlkdo0xmuq.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 81960,
+      "decodedBodySize": 198937,
+      "duration": 22.6
+    },
+    {
+      "url": "http://localhost:5058/_framework/Microsoft.AspNetCore.Components.WebAssembly.lgsumg381b.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 75737,
+      "decodedBodySize": 189209,
+      "duration": 22.7
+    },
+    {
+      "url": "http://localhost:5058/_framework/Microsoft.AspNetCore.Metadata.f2y1c47nbg.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2524,
+      "decodedBodySize": 5913,
+      "duration": 11.5
+    },
+    {
+      "url": "http://localhost:5058/_framework/Microsoft.Extensions.Configuration.jpah6kjowj.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 15892,
+      "decodedBodySize": 34585,
+      "duration": 16.9
+    },
+    {
+      "url": "http://localhost:5058/_framework/Microsoft.Extensions.Configuration.Binder.o7zikme31w.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 14558,
+      "decodedBodySize": 33049,
+      "duration": 16.6
+    },
+    {
+      "url": "http://localhost:5058/_framework/Microsoft.Extensions.Configuration.EnvironmentVariables.81p1gld0yj.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 7731,
+      "decodedBodySize": 17177,
+      "duration": 16.5
+    },
+    {
+      "url": "http://localhost:5058/_framework/Microsoft.Extensions.Configuration.FileExtensions.ertgfpps4p.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 8873,
+      "decodedBodySize": 19225,
+      "duration": 16.3
+    },
+    {
+      "url": "http://localhost:5058/_framework/Microsoft.Extensions.Configuration.Json.9tralt5y4o.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 7949,
+      "decodedBodySize": 17177,
+      "duration": 16
+    },
+    {
+      "url": "http://localhost:5058/_framework/Microsoft.Extensions.DependencyInjection.8nrtvux4zz.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 38311,
+      "decodedBodySize": 86809,
+      "duration": 20.9
+    },
+    {
+      "url": "http://localhost:5058/_framework/Microsoft.Extensions.Diagnostics.ixmwysmqet.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 17583,
+      "decodedBodySize": 38169,
+      "duration": 16.3
+    },
+    {
+      "url": "http://localhost:5058/_framework/Microsoft.Extensions.FileProviders.Physical.cjr067e0v9.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 19579,
+      "decodedBodySize": 40729,
+      "duration": 46.9
+    },
+    {
+      "url": "http://localhost:5058/_framework/Microsoft.Extensions.FileSystemGlobbing.ret9i7c178.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 17311,
+      "decodedBodySize": 37145,
+      "duration": 48.1
+    },
+    {
+      "url": "http://localhost:5058/_framework/Microsoft.Extensions.Localization.Abstractions.4b6nbsrv3k.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 3882,
+      "decodedBodySize": 8985,
+      "duration": 47.8
+    },
+    {
+      "url": "http://localhost:5058/_framework/Microsoft.Extensions.Logging.bej5obyinr.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 19133,
+      "decodedBodySize": 41241,
+      "duration": 47.8
+    },
+    {
+      "url": "http://localhost:5058/_framework/Microsoft.Extensions.Options.ConfigurationExtensions.npdf2mew2x.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 5214,
+      "decodedBodySize": 11545,
+      "duration": 47.8
+    },
+    {
+      "url": "http://localhost:5058/_framework/Microsoft.Extensions.Validation.aen3kvkd3s.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 6081,
+      "decodedBodySize": 13081,
+      "duration": 47.8
+    },
+    {
+      "url": "http://localhost:5058/_framework/Microsoft.JSInterop.nttqb51axg.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 28101,
+      "decodedBodySize": 64793,
+      "duration": 48.3
+    },
+    {
+      "url": "http://localhost:5058/_framework/Microsoft.JSInterop.WebAssembly.nspfts9ll4.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 6828,
+      "decodedBodySize": 14105,
+      "duration": 48.4
+    },
+    {
+      "url": "http://localhost:5058/_framework/Microsoft.CSharp.e0qo7pq431.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 133275,
+      "decodedBodySize": 300825,
+      "duration": 195.2
+    },
+    {
+      "url": "http://localhost:5058/_framework/Microsoft.Extensions.Caching.Abstractions.ji92f2ue2r.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 14632,
+      "decodedBodySize": 33049,
+      "duration": 49.2
+    },
+    {
+      "url": "http://localhost:5058/_framework/Microsoft.Extensions.Configuration.Abstractions.jr2rndi3l2.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 7722,
+      "decodedBodySize": 16665,
+      "duration": 49.4
+    },
+    {
+      "url": "http://localhost:5058/_framework/Microsoft.Extensions.DependencyInjection.Abstractions.2pkt53d3zg.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 23178,
+      "decodedBodySize": 57625,
+      "duration": 50
+    },
+    {
+      "url": "http://localhost:5058/_framework/Microsoft.Extensions.Diagnostics.Abstractions.xkjbjlcndq.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 7238,
+      "decodedBodySize": 17689,
+      "duration": 50.3
+    },
+    {
+      "url": "http://localhost:5058/_framework/Microsoft.Extensions.FileProviders.Abstractions.js7xg1qaa3.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 5134,
+      "decodedBodySize": 11545,
+      "duration": 50.7
+    },
+    {
+      "url": "http://localhost:5058/_framework/Microsoft.Extensions.Hosting.Abstractions.wcjo6wo4we.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 9622,
+      "decodedBodySize": 21785,
+      "duration": 51
+    },
+    {
+      "url": "http://localhost:5058/_framework/Microsoft.Extensions.Logging.Abstractions.3baor7lyek.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 25214,
+      "decodedBodySize": 56601,
+      "duration": 51.6
+    },
+    {
+      "url": "http://localhost:5058/_framework/Microsoft.Extensions.Options.lle9bjpr7x.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 30584,
+      "decodedBodySize": 71449,
+      "duration": 58.7
+    },
+    {
+      "url": "http://localhost:5058/_framework/Microsoft.Extensions.Primitives.qkg5z54yxk.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 16271,
+      "decodedBodySize": 35609,
+      "duration": 53.2
+    },
+    {
+      "url": "http://localhost:5058/_framework/Microsoft.VisualBasic.Core.9hp7heuzvd.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 171065,
+      "decodedBodySize": 418585,
+      "duration": 248
+    },
+    {
+      "url": "http://localhost:5058/_framework/Microsoft.VisualBasic.3153rv77ud.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2941,
+      "decodedBodySize": 6937,
+      "duration": 51.1
+    },
+    {
+      "url": "http://localhost:5058/_framework/Microsoft.Win32.Primitives.7l2w0jy3gh.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2260,
+      "decodedBodySize": 5401,
+      "duration": 50.9
+    },
+    {
+      "url": "http://localhost:5058/_framework/Microsoft.Win32.Registry.8k03oo4pvj.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 9262,
+      "decodedBodySize": 22809,
+      "duration": 50.9
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.AppContext.w0q6o3xz0p.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2144,
+      "decodedBodySize": 4889,
+      "duration": 51
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Buffers.kisxcel5aj.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2154,
+      "decodedBodySize": 4889,
+      "duration": 52.8
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Collections.Concurrent.0fm2dujsxz.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 23399,
+      "decodedBodySize": 53529,
+      "duration": 52.9
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Collections.Immutable.i38mtk9wpz.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 99973,
+      "decodedBodySize": 242969,
+      "duration": 185.3
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Collections.NonGeneric.hh51n9wlll.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 14946,
+      "decodedBodySize": 37657,
+      "duration": 75.4
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Collections.Specialized.zjw1cf3gk9.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 16577,
+      "decodedBodySize": 37657,
+      "duration": 75.9
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Collections.jfnn2w5kyl.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 44046,
+      "decodedBodySize": 102681,
+      "duration": 101.1
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.ComponentModel.Annotations.sqwmiddbni.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 43391,
+      "decodedBodySize": 108825,
+      "duration": 102.5
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.ComponentModel.DataAnnotations.kde5mvd7o9.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2631,
+      "decodedBodySize": 6425,
+      "duration": 91.7
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.ComponentModel.EventBasedAsync.matliiwap8.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 6934,
+      "decodedBodySize": 16153,
+      "duration": 91.4
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.ComponentModel.Primitives.p7dqt4az7y.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 13630,
+      "decodedBodySize": 32025,
+      "duration": 113.2
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.ComponentModel.TypeConverter.l2w3ujaycm.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 125749,
+      "decodedBodySize": 307481,
+      "duration": 261.2
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.ComponentModel.lyf3vi548v.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2618,
+      "decodedBodySize": 5913,
+      "duration": 134.7
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Configuration.oxcmk91qen.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 3190,
+      "decodedBodySize": 8985,
+      "duration": 134.5
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Console.4bqcuf4zvd.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 19928,
+      "decodedBodySize": 43289,
+      "duration": 134.6
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Core.vsc2owax53.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 4645,
+      "decodedBodySize": 13081,
+      "duration": 134.6
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Data.Common.cdvytj5kih.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 379552,
+      "decodedBodySize": 1007385,
+      "duration": 309.8
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Data.DataSetExtensions.mfqnim5j9f.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2116,
+      "decodedBodySize": 5401,
+      "duration": 134.7
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Data.kkwgyw7heh.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 5126,
+      "decodedBodySize": 15129,
+      "duration": 134.7
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Diagnostics.Contracts.du5hz8jbzh.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2439,
+      "decodedBodySize": 5913,
+      "duration": 134.8
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Diagnostics.Debug.d2k39tffay.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2329,
+      "decodedBodySize": 5401,
+      "duration": 134.7
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Diagnostics.DiagnosticSource.iej85cqmw9.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 85218,
+      "decodedBodySize": 198425,
+      "duration": 232
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Diagnostics.FileVersionInfo.eh47cjnlir.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 5145,
+      "decodedBodySize": 12057,
+      "duration": 134.7
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Diagnostics.Process.xfnck8u481.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 20380,
+      "decodedBodySize": 57113,
+      "duration": 134.9
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Diagnostics.StackTrace.sxp1526n68.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 7561,
+      "decodedBodySize": 15641,
+      "duration": 134.9
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Diagnostics.TextWriterTraceListener.hoifzgunui.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 9606,
+      "decodedBodySize": 21273,
+      "duration": 135.1
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Diagnostics.Tools.7w00d3dvtc.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2233,
+      "decodedBodySize": 4889,
+      "duration": 135.1
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Diagnostics.TraceSource.1b8o5yjdmc.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 20473,
+      "decodedBodySize": 48409,
+      "duration": 135.5
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Diagnostics.Tracing.hp8yc23mvz.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2551,
+      "decodedBodySize": 5913,
+      "duration": 135.9
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Drawing.Primitives.hili0ra45p.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 24689,
+      "decodedBodySize": 54553,
+      "duration": 136.2
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Drawing.w8e69s8x36.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 3933,
+      "decodedBodySize": 10009,
+      "duration": 136.3
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Dynamic.Runtime.kfzo4qqdha.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2498,
+      "decodedBodySize": 5913,
+      "duration": 136.7
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Formats.Asn1.mk0nj000ys.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 38188,
+      "decodedBodySize": 91929,
+      "duration": 209.7
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Formats.Tar.jnijfxpjfj.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 11286,
+      "decodedBodySize": 29977,
+      "duration": 138.8
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Globalization.Calendars.wv3fd32294.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2332,
+      "decodedBodySize": 5401,
+      "duration": 139.2
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Globalization.Extensions.lt4rir5e9e.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2222,
+      "decodedBodySize": 5401,
+      "duration": 139.5
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Globalization.inpdihpm04.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2315,
+      "decodedBodySize": 5401,
+      "duration": 139.6
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.IO.Compression.Brotli.vpocjaaqs6.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 7026,
+      "decodedBodySize": 17689,
+      "duration": 135.9
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.IO.Compression.FileSystem.rv0f03pedo.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2037,
+      "decodedBodySize": 4889,
+      "duration": 134.8
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.IO.Compression.ZipFile.vz3kccsfhi.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 23918,
+      "decodedBodySize": 56601,
+      "duration": 135.3
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.IO.Compression.yytijsjrx3.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 91193,
+      "decodedBodySize": 222489,
+      "duration": 233.4
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.IO.FileSystem.AccessControl.qtmuvtfapv.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 8577,
+      "decodedBodySize": 21785,
+      "duration": 135.7
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.IO.FileSystem.DriveInfo.76qy4l8g2f.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 6074,
+      "decodedBodySize": 13593,
+      "duration": 135.7
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.IO.FileSystem.Primitives.81dkwsayi1.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2218,
+      "decodedBodySize": 4889,
+      "duration": 135.8
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.IO.FileSystem.Watcher.wyqgyyjs60.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 8984,
+      "decodedBodySize": 22809,
+      "duration": 136
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.IO.FileSystem.x6zrim19qp.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2347,
+      "decodedBodySize": 5401,
+      "duration": 136
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.IO.IsolatedStorage.b1greon3kc.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 9474,
+      "decodedBodySize": 24345,
+      "duration": 136.4
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.IO.MemoryMappedFiles.hyd5prdx8h.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 17041,
+      "decodedBodySize": 38681,
+      "duration": 137
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.IO.Pipelines.i7m0o88yyv.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 33754,
+      "decodedBodySize": 73497,
+      "duration": 204.6
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.IO.Pipes.AccessControl.9i2h8efeq0.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 5625,
+      "decodedBodySize": 13081,
+      "duration": 137.7
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.IO.Pipes.qqn34nouvl.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 11816,
+      "decodedBodySize": 32537,
+      "duration": 138.5
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.IO.UnmanagedMemoryStream.i5d70a2pe5.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2256,
+      "decodedBodySize": 5401,
+      "duration": 138.4
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.IO.io16bl7y4v.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2318,
+      "decodedBodySize": 5401,
+      "duration": 138.3
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Linq.AsyncEnumerable.camefdrzw6.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 165155,
+      "decodedBodySize": 504089,
+      "duration": 258.4
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Linq.Expressions.jdp183gnbq.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 217720,
+      "decodedBodySize": 565529,
+      "duration": 266.5
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Linq.Parallel.1ymg6nuczv.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 89449,
+      "decodedBodySize": 214809,
+      "duration": 236.4
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Linq.Queryable.o30dlt2t6i.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 22400,
+      "decodedBodySize": 71449,
+      "duration": 151.7
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Linq.t8t4mrpfpe.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 81497,
+      "decodedBodySize": 203033,
+      "duration": 231
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Memory.oq442f53lw.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 23639,
+      "decodedBodySize": 50457,
+      "duration": 140.9
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Net.Http.Json.brwnbcmxs8.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 19791,
+      "decodedBodySize": 45849,
+      "duration": 146.1
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Net.Http.8ls8lyr1c3.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 122238,
+      "decodedBodySize": 290073,
+      "duration": 245
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Net.HttpListener.hzgg5ejx4f.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 16294,
+      "decodedBodySize": 45849,
+      "duration": 147.5
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Net.Mail.o78aikxytd.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 52157,
+      "decodedBodySize": 126233,
+      "duration": 205.2
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Net.NameResolution.gq9w8wv4bi.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 8051,
+      "decodedBodySize": 20249,
+      "duration": 148.6
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Net.NetworkInformation.n0docqneqh.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 13041,
+      "decodedBodySize": 32025,
+      "duration": 149.6
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Net.Ping.wd2qb9vkad.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 7627,
+      "decodedBodySize": 17689,
+      "duration": 149.8
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Net.Primitives.hutl0oz2b9.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 47445,
+      "decodedBodySize": 98073,
+      "duration": 202.4
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Net.Quic.xbjteeoeq4.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 11296,
+      "decodedBodySize": 28953,
+      "duration": 150.5
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Net.Requests.221e5hzt9o.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 20705,
+      "decodedBodySize": 55577,
+      "duration": 151
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Net.Security.k0ujiy0am5.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 35353,
+      "decodedBodySize": 106265,
+      "duration": 204.8
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Net.ServerSentEvents.i0kw51enn5.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 15277,
+      "decodedBodySize": 31001,
+      "duration": 151.3
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Net.ServicePoint.6j6e2849b4.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2220,
+      "decodedBodySize": 4889,
+      "duration": 151.5
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Net.Sockets.vkb1pnt9as.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 23474,
+      "decodedBodySize": 64281,
+      "duration": 152.4
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Net.WebClient.juxsrxk1vz.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 15263,
+      "decodedBodySize": 46873,
+      "duration": 152.6
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Net.WebHeaderCollection.tcsjniqirb.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 10383,
+      "decodedBodySize": 22809,
+      "duration": 152.7
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Net.WebProxy.6xt1ac7vz5.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 6025,
+      "decodedBodySize": 12057,
+      "duration": 152.9
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Net.WebSockets.Client.dz4re4lafi.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 18197,
+      "decodedBodySize": 41753,
+      "duration": 153.3
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Net.WebSockets.khfecpbems.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 42836,
+      "decodedBodySize": 100121,
+      "duration": 210.8
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Net.0d6cm0w934.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2817,
+      "decodedBodySize": 6937,
+      "duration": 154.4
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Numerics.Vectors.0x1c7sjktv.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2577,
+      "decodedBodySize": 5913,
+      "duration": 154.9
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Numerics.leckpftrej.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2074,
+      "decodedBodySize": 4889,
+      "duration": 155.3
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.ObjectModel.0qpny5tqd4.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 13596,
+      "decodedBodySize": 31001,
+      "duration": 155.6
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Private.DataContractSerialization.3qgpohup6a.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 306882,
+      "decodedBodySize": 849177,
+      "duration": 283.5
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Private.Uri.aknhnp8ddv.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 42407,
+      "decodedBodySize": 92953,
+      "duration": 211.9
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Private.Xml.Linq.r97hx586ch.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 60386,
+      "decodedBodySize": 144665,
+      "duration": 212.9
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Private.Xml.mlaajvyexj.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 1072991,
+      "decodedBodySize": 3097885,
+      "duration": 698.3
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Reflection.DispatchProxy.vlmtgv65wf.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 13102,
+      "decodedBodySize": 27929,
+      "duration": 157.3
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Reflection.Emit.ILGeneration.kyal0on48t.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2326,
+      "decodedBodySize": 5401,
+      "duration": 157.5
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Reflection.Emit.Lightweight.qhd57gltfo.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2281,
+      "decodedBodySize": 5401,
+      "duration": 157.5
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Reflection.Emit.zb8wuoehqy.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 54553,
+      "decodedBodySize": 124185,
+      "duration": 213.4
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Reflection.Extensions.i5zcbw4iab.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2207,
+      "decodedBodySize": 4889,
+      "duration": 158.2
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Reflection.Metadata.cvu0sis9hb.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 196546,
+      "decodedBodySize": 493849,
+      "duration": 259.2
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Reflection.Primitives.rv8xx0rsbv.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2411,
+      "decodedBodySize": 5401,
+      "duration": 159.3
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Reflection.TypeExtensions.dowqrlqcnz.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 5986,
+      "decodedBodySize": 14105,
+      "duration": 159.3
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Reflection.ogs9ti8z3k.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2508,
+      "decodedBodySize": 5913,
+      "duration": 159.2
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Resources.Reader.7ywfox205u.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2171,
+      "decodedBodySize": 4889,
+      "duration": 155.8
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Resources.ResourceManager.l6z7yfwmvs.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2293,
+      "decodedBodySize": 5401,
+      "duration": 155.5
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Resources.Writer.313d910cpu.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 7785,
+      "decodedBodySize": 16665,
+      "duration": 155.6
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Runtime.CompilerServices.Unsafe.5naidm3hnv.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2171,
+      "decodedBodySize": 4889,
+      "duration": 155.6
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Runtime.CompilerServices.VisualC.vhbmhigdu6.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 3122,
+      "decodedBodySize": 6937,
+      "duration": 155.5
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Runtime.Extensions.immqe9msuz.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 3053,
+      "decodedBodySize": 7449,
+      "duration": 155.5
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Runtime.Handles.hsca0r8lfq.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2249,
+      "decodedBodySize": 5401,
+      "duration": 155.4
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Runtime.InteropServices.RuntimeInformation.ualglqq81k.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2210,
+      "decodedBodySize": 5401,
+      "duration": 155.1
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Runtime.InteropServices.faetretm2e.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 24079,
+      "decodedBodySize": 54041,
+      "duration": 155.1
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Runtime.Intrinsics.802p7n6k8b.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 3748,
+      "decodedBodySize": 8473,
+      "duration": 155.1
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Runtime.Loader.eidltsl2f9.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2373,
+      "decodedBodySize": 5401,
+      "duration": 155
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Runtime.Numerics.b3cxdpmtgo.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 70982,
+      "decodedBodySize": 176409,
+      "duration": 221.6
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Runtime.Serialization.Formatters.367zxkp8xo.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 24575,
+      "decodedBodySize": 55577,
+      "duration": 155.4
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Runtime.Serialization.Json.r2ls9ue6ca.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2301,
+      "decodedBodySize": 5401,
+      "duration": 155.3
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Runtime.Serialization.Primitives.tlmnoyg8tt.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 5551,
+      "decodedBodySize": 13081,
+      "duration": 155.4
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Runtime.Serialization.Xml.wdv4vg37l4.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2612,
+      "decodedBodySize": 6425,
+      "duration": 155.3
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Runtime.Serialization.w8c5bv3i8y.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2553,
+      "decodedBodySize": 6937,
+      "duration": 155.4
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Runtime.ljpure1lar.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 11146,
+      "decodedBodySize": 35609,
+      "duration": 155.5
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Security.AccessControl.h3ktqn7ptm.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 17187,
+      "decodedBodySize": 47385,
+      "duration": 155.8
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Security.Claims.cg87efyyav.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 16878,
+      "decodedBodySize": 44313,
+      "duration": 156.1
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Security.Cryptography.Algorithms.fpu4rc6102.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2774,
+      "decodedBodySize": 6937,
+      "duration": 156.3
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Security.Cryptography.Cng.d9ys1ule48.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2530,
+      "decodedBodySize": 5913,
+      "duration": 156.3
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Security.Cryptography.Csp.3jv3zoukwi.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2396,
+      "decodedBodySize": 5913,
+      "duration": 156.3
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Security.Cryptography.Encoding.6awrknpibm.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2322,
+      "decodedBodySize": 5401,
+      "duration": 156.2
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Security.Cryptography.OpenSsl.xk45senqyh.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2268,
+      "decodedBodySize": 5401,
+      "duration": 156.1
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Security.Cryptography.Primitives.0yv3hhf2hj.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2389,
+      "decodedBodySize": 5401,
+      "duration": 160.2
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Security.Cryptography.X509Certificates.j9wm55abdo.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2729,
+      "decodedBodySize": 6937,
+      "duration": 161.5
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Security.Cryptography.0l418f973x.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 244829,
+      "decodedBodySize": 677145,
+      "duration": 262.1
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Security.Principal.Windows.3339vubpnp.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 11336,
+      "decodedBodySize": 27417,
+      "duration": 163.5
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Security.Principal.5p8v2r4e9q.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2213,
+      "decodedBodySize": 4889,
+      "duration": 163.9
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Security.SecureString.fi37f3qjy6.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2239,
+      "decodedBodySize": 5401,
+      "duration": 164.4
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Security.ua00ewmf1q.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 3036,
+      "decodedBodySize": 7961,
+      "duration": 165.4
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.ServiceModel.Web.q9f6qjjb01.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2595,
+      "decodedBodySize": 6425,
+      "duration": 165.5
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.ServiceProcess.3sj3jtmn1y.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2348,
+      "decodedBodySize": 5401,
+      "duration": 165.9
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Text.Encoding.CodePages.pvosu98fs6.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 519098,
+      "decodedBodySize": 731929,
+      "duration": 266.2
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Text.Encoding.Extensions.1tk82mr0sb.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2303,
+      "decodedBodySize": 5401,
+      "duration": 169.6
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Text.Encoding.gx6u2npyoe.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2278,
+      "decodedBodySize": 5401,
+      "duration": 191.7
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Text.Encodings.Web.d1d2ypvaqf.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 22948,
+      "decodedBodySize": 56089,
+      "duration": 194.3
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Text.Json.uxge6gziev.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 259980,
+      "decodedBodySize": 711449,
+      "duration": 264.4
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Text.RegularExpressions.i33wsiky3s.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 165885,
+      "decodedBodySize": 384793,
+      "duration": 241.2
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Threading.AccessControl.l24l7lnxnt.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 8596,
+      "decodedBodySize": 23321,
+      "duration": 199.1
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Threading.Channels.nr14a155nr.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 24926,
+      "decodedBodySize": 56089,
+      "duration": 199.4
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Threading.Overlapped.lq87izbe98.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2355,
+      "decodedBodySize": 5401,
+      "duration": 200.3
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Threading.Tasks.Dataflow.d2etrpio29.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 74293,
+      "decodedBodySize": 175897,
+      "duration": 224.2
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Threading.Tasks.Extensions.r7b8d2gyqh.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2357,
+      "decodedBodySize": 5401,
+      "duration": 200.7
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Threading.Tasks.Parallel.rwdf2plpzx.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 21723,
+      "decodedBodySize": 51481,
+      "duration": 215
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Threading.Tasks.6kddfirisu.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2610,
+      "decodedBodySize": 6425,
+      "duration": 217.5
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Threading.Thread.4s5zdf3gwq.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2383,
+      "decodedBodySize": 5401,
+      "duration": 217.2
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Threading.ThreadPool.kr1hxnnjfs.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2310,
+      "decodedBodySize": 5401,
+      "duration": 218.4
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Threading.Timer.0u4563nh13.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2175,
+      "decodedBodySize": 4889,
+      "duration": 223
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Threading.k95hk2ni6y.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 15110,
+      "decodedBodySize": 34585,
+      "duration": 222.8
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Transactions.Local.55qmwe0wl2.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 52569,
+      "decodedBodySize": 165657,
+      "duration": 256.4
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Transactions.2oqard5sqe.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2417,
+      "decodedBodySize": 6425,
+      "duration": 252.7
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.ValueTuple.a6hls1tzg7.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2231,
+      "decodedBodySize": 5401,
+      "duration": 253.7
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Web.HttpUtility.2s5ct2ewsk.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 9949,
+      "decodedBodySize": 19737,
+      "duration": 270.6
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Web.tk98qt61wh.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2160,
+      "decodedBodySize": 4889,
+      "duration": 280.5
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Windows.jl02lvbc66.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2325,
+      "decodedBodySize": 5401,
+      "duration": 280.5
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Xml.Linq.kjnq771p2j.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2259,
+      "decodedBodySize": 5401,
+      "duration": 294.3
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Xml.ReaderWriter.b0jot2j4ey.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 4079,
+      "decodedBodySize": 11545,
+      "duration": 294.5
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Xml.Serialization.6brc2ehzei.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2298,
+      "decodedBodySize": 5913,
+      "duration": 294.3
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Xml.XDocument.xqorttgppi.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2450,
+      "decodedBodySize": 5913,
+      "duration": 294.1
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Xml.XPath.XDocument.yoyzrkkgpn.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2536,
+      "decodedBodySize": 5913,
+      "duration": 293.9
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Xml.XPath.2inzx80kh1.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2366,
+      "decodedBodySize": 5401,
+      "duration": 293.9
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Xml.XmlDocument.z13hcu1lm0.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2398,
+      "decodedBodySize": 5401,
+      "duration": 294.3
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Xml.XmlSerializer.zs4szemvoe.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2915,
+      "decodedBodySize": 7449,
+      "duration": 294.8
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.Xml.p1h7rh240x.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 4292,
+      "decodedBodySize": 13081,
+      "duration": 294.9
+    },
+    {
+      "url": "http://localhost:5058/_framework/System.vbnq7znrkk.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 11903,
+      "decodedBodySize": 39705,
+      "duration": 296.8
+    },
+    {
+      "url": "http://localhost:5058/_framework/WindowsBase.znzd9i0mgl.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 2558,
+      "decodedBodySize": 5913,
+      "duration": 297.9
+    },
+    {
+      "url": "http://localhost:5058/_framework/mscorlib.kb9zdz25a0.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 15184,
+      "decodedBodySize": 49433,
+      "duration": 298.9
+    },
+    {
+      "url": "http://localhost:5058/_framework/netstandard.iclaleazb3.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 26578,
+      "decodedBodySize": 90905,
+      "duration": 301.7
+    },
+    {
+      "url": "http://localhost:5058/_framework/Microsoft.DotNet.HotReload.WebAssembly.Browser.6lxiwual07.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 25014,
+      "decodedBodySize": 56089,
+      "duration": 299.8
+    },
+    {
+      "url": "http://localhost:5058/_framework/BlazorAppAuto.Client.eelu724ymr.wasm",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 3653,
+      "decodedBodySize": 7961,
+      "duration": 299.8
+    },
+    {
+      "url": "http://localhost:5058/_framework/icudt_EFIGS.xyuimhy3ww.dat",
+      "initiatorType": "fetch",
+      "transferSize": 0,
+      "encodedBodySize": 233863,
+      "decodedBodySize": 621712,
+      "duration": 308.1
+    },
+    {
+      "url": "http://localhost:5058/_framework/resource-collection.wNY5F.js",
+      "initiatorType": "script",
+      "transferSize": 9805,
+      "encodedBodySize": 9505,
+      "decodedBodySize": 112157,
+      "duration": 6.6
+    }
+  ],
+  "serverOutput": [
+    "Using launch settings from D:\\68815\\BlazorAppAuto\\BlazorAppAuto\\BlazorAppAuto\\Properties\\launchSettings.json...\r\n",
+    "info: Microsoft.Hosting.Lifetime[14]\r\n      Now listening on: http://localhost:5058\r\n",
+    "info: Microsoft.Hosting.Lifetime[0]\r\n      Application started. Press Ctrl+C to shut down.\r\n",
+    "info: Microsoft.Hosting.Lifetime[0]\r\n      Hosting environment: Development\r\ninfo: Microsoft.Hosting.Lifetime[0]\r\n      Content root path: D:\\68815\\BlazorAppAuto\\BlazorAppAuto\\BlazorAppAuto\r\n",
+    "warn: Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware[3]\r\n      Failed to determine the https port for redirect.\r\n"
+  ]
+}

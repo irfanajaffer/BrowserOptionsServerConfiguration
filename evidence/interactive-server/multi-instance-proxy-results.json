@@ -1,0 +1,177 @@
+{
+  "testedAt": "2026-09-01T10:45:04.085Z",
+  "proxyUrl": "http://127.0.0.1:5200",
+  "backends": {
+    "A": {
+      "host": "127.0.0.1",
+      "port": 5201
+    },
+    "B": {
+      "host": "127.0.0.1",
+      "port": 5202
+    }
+  },
+  "noAffinity": {
+    "status": "Pass",
+    "observations": [
+      {
+        "url": "http://127.0.0.1:5200/counter",
+        "proxyBackend": "A",
+        "serverInstance": "A",
+        "variant": "normal",
+        "logLevel": "Warning",
+        "pass": true
+      },
+      {
+        "url": "http://127.0.0.1:5200/counter?detailed=true",
+        "proxyBackend": "B",
+        "serverInstance": "B",
+        "variant": "detailed",
+        "logLevel": "Trace",
+        "pass": true
+      },
+      {
+        "url": "http://127.0.0.1:5200/counter",
+        "proxyBackend": "A",
+        "serverInstance": "A",
+        "variant": "normal",
+        "logLevel": "Warning",
+        "pass": true
+      },
+      {
+        "url": "http://127.0.0.1:5200/counter?detailed=true",
+        "proxyBackend": "B",
+        "serverInstance": "B",
+        "variant": "detailed",
+        "logLevel": "Trace",
+        "pass": true
+      },
+      {
+        "url": "http://127.0.0.1:5200/counter",
+        "proxyBackend": "A",
+        "serverInstance": "A",
+        "variant": "normal",
+        "logLevel": "Warning",
+        "pass": true
+      },
+      {
+        "url": "http://127.0.0.1:5200/counter?detailed=true",
+        "proxyBackend": "B",
+        "serverInstance": "B",
+        "variant": "detailed",
+        "logLevel": "Trace",
+        "pass": true
+      },
+      {
+        "url": "http://127.0.0.1:5200/counter",
+        "proxyBackend": "A",
+        "serverInstance": "A",
+        "variant": "normal",
+        "logLevel": "Warning",
+        "pass": true
+      },
+      {
+        "url": "http://127.0.0.1:5200/counter?detailed=true",
+        "proxyBackend": "B",
+        "serverInstance": "B",
+        "variant": "detailed",
+        "logLevel": "Trace",
+        "pass": true
+      }
+    ]
+  },
+  "stickyClients": {
+    "status": "Pass",
+    "normal": {
+      "instance": "A",
+      "variant": "normal",
+      "logLevel": "Warning",
+      "requestId": "0HNO82O8U4RNQ:0000000A",
+      "proxyHost": "127.0.0.1:5200"
+    },
+    "detailed": {
+      "instance": "B",
+      "variant": "detailed",
+      "logLevel": "Trace",
+      "requestId": "0HNO82O8U55T6:0000000A",
+      "proxyHost": "127.0.0.1:5200"
+    },
+    "reloadStates": [
+      {
+        "normal": {
+          "instance": "A",
+          "variant": "normal",
+          "logLevel": "Warning",
+          "requestId": "0HNO82O8U4RNT:00000005",
+          "proxyHost": "127.0.0.1:5200"
+        },
+        "detailed": {
+          "instance": "B",
+          "variant": "detailed",
+          "logLevel": "Trace",
+          "requestId": "0HNO82O8U55T6:00000004",
+          "proxyHost": "127.0.0.1:5200"
+        }
+      },
+      {
+        "normal": {
+          "instance": "A",
+          "variant": "normal",
+          "logLevel": "Warning",
+          "requestId": "0HNO82O8U4RNU:00000006",
+          "proxyHost": "127.0.0.1:5200"
+        },
+        "detailed": {
+          "instance": "B",
+          "variant": "detailed",
+          "logLevel": "Trace",
+          "requestId": "0HNO82O8U55T2:00000005",
+          "proxyHost": "127.0.0.1:5200"
+        }
+      },
+      {
+        "normal": {
+          "instance": "A",
+          "variant": "normal",
+          "logLevel": "Warning",
+          "requestId": "0HNO82O8U4RNQ:0000000A",
+          "proxyHost": "127.0.0.1:5200"
+        },
+        "detailed": {
+          "instance": "B",
+          "variant": "detailed",
+          "logLevel": "Trace",
+          "requestId": "0HNO82O8U55T6:0000000A",
+          "proxyHost": "127.0.0.1:5200"
+        }
+      }
+    ],
+    "browserMessages": [
+      "[client B] pageerror: Cannot read properties of null (reading 'addEventListener')",
+      "[client B] info: [2026-09-01T10:45:01.987Z] Information: Normalizing '_blazor' to 'http://127.0.0.1:5200/_blazor'.",
+      "[client B] info: [2026-09-01T10:45:02.036Z] Information: WebSocket connected to ws://127.0.0.1:5200/_blazor?id=p8pReIN-OGJNH9ehCOR4jg.",
+      "[client A] pageerror: Cannot read properties of null (reading 'addEventListener')",
+      "[client A] info: [2026-09-01T10:45:02.105Z] Information: Normalizing '_blazor' to 'http://127.0.0.1:5200/_blazor'.",
+      "[client A] info: [2026-09-01T10:45:02.147Z] Information: WebSocket connected to ws://127.0.0.1:5200/_blazor?id=jPpFwMrTKp6Ikug0Hgnv_g.",
+      "[client B] pageerror: Cannot read properties of null (reading 'addEventListener')",
+      "[client A] pageerror: Cannot read properties of null (reading 'addEventListener')",
+      "[client B] info: [2026-09-01T10:45:02.660Z] Information: Normalizing '_blazor' to 'http://127.0.0.1:5200/_blazor'.",
+      "[client A] info: [2026-09-01T10:45:02.663Z] Information: Normalizing '_blazor' to 'http://127.0.0.1:5200/_blazor'.",
+      "[client B] info: [2026-09-01T10:45:02.683Z] Information: WebSocket connected to ws://127.0.0.1:5200/_blazor?id=meP4qIxBmuD0iKaxK-Ln8Q.",
+      "[client A] info: [2026-09-01T10:45:02.697Z] Information: WebSocket connected to ws://127.0.0.1:5200/_blazor?id=HSqsJMHc9_y62BR_N3FVZA.",
+      "[client B] pageerror: Cannot read properties of null (reading 'addEventListener')",
+      "[client A] pageerror: Cannot read properties of null (reading 'addEventListener')",
+      "[client A] info: [2026-09-01T10:45:02.847Z] Information: Normalizing '_blazor' to 'http://127.0.0.1:5200/_blazor'.",
+      "[client B] info: [2026-09-01T10:45:02.848Z] Information: Normalizing '_blazor' to 'http://127.0.0.1:5200/_blazor'.",
+      "[client B] info: [2026-09-01T10:45:02.878Z] Information: WebSocket connected to ws://127.0.0.1:5200/_blazor?id=x73J4MEXLnqIiKZYKCH_jg.",
+      "[client A] info: [2026-09-01T10:45:02.896Z] Information: WebSocket connected to ws://127.0.0.1:5200/_blazor?id=emZsCT2A9mr-rrFQBIP6_A.",
+      "[client A] pageerror: Cannot read properties of null (reading 'addEventListener')",
+      "[client B] pageerror: Cannot read properties of null (reading 'addEventListener')",
+      "[client B] info: [2026-09-01T10:45:03.096Z] Information: Normalizing '_blazor' to 'http://127.0.0.1:5200/_blazor'.",
+      "[client A] info: [2026-09-01T10:45:03.096Z] Information: Normalizing '_blazor' to 'http://127.0.0.1:5200/_blazor'.",
+      "[client B] info: [2026-09-01T10:45:03.129Z] Information: WebSocket connected to ws://127.0.0.1:5200/_blazor?id=f-Hnjf7fMozQTcIVUOogtw.",
+      "[client A] info: [2026-09-01T10:45:03.145Z] Information: WebSocket connected to ws://127.0.0.1:5200/_blazor?id=6MtovUrQ8wEFOzfmeY1Z1w."
+    ]
+  },
+  "status": "Pass"
+}

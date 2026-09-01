@@ -1,0 +1,8 @@
+Browser console capture
+Captured: 2026-08-31
+URL: http://localhost:5003/?detailed=true
+Configured request LogLevel: Trace
+Observation window: full navigation plus 4 seconds
+Console message count: 0
+
+No browser console messages were emitted.

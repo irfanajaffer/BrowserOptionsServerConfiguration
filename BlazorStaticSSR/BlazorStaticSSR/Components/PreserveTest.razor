@@ -1,0 +1,29 @@
+@attribute [StreamRendering]
+
+<div id="preserve-test" tabindex="0" class="border p-2 my-3">
+    @if (_isLoading)
+    {
+        <span>Initial SSR content (waiting for streamed update)</span>
+    }
+    else
+    {
+        <span>Final streamed SSR content: @_completedAt</span>
+    }
+</div>
+
+<p>
+    The test takes three seconds. The result badge in the lower-right corner reports whether
+    this DOM node survived the streamed update.
+</p>
+
+@code {
+    private bool _isLoading = true;
+    private string? _completedAt;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await Task.Delay(TimeSpan.FromSeconds(3));
+        _completedAt = DateTimeOffset.Now.ToString("O");
+        _isLoading = false;
+    }
+}

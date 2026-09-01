@@ -1,0 +1,10 @@
+Browser console capture — cached Interactive Auto reload
+Captured: 2026-08-31
+URL: http://localhost:5058/counter
+Observation window: full reload plus 8 seconds
+Runtime proof: 205 .wasm resources; no /_blazor/negotiate resource
+Console/page-error event count: 2 (1 info, 1 error)
+
+INFO  Debugging hotkey: Shift+Alt+D (when application has focus)
+ERROR Cannot read properties of null (reading 'addEventListener')
+      at /Components/Layout/ReconnectModal.abdmv1u4y3.razor.js:3:16

@@ -1,0 +1,22 @@
+@namespace BlazorServerApp.Components
+
+<div class="demo">
+    <label for="demoInput">Type something here (state to observe across hydration):</label>
+    <input id="demoInput" @bind="Text" placeholder="Type and then navigate" />
+
+    <p>
+        <button @onclick="Increment">Click me (@count)</button>
+    </p>
+
+    <p>Current text: @Text</p>
+</div>
+
+@code {
+    private string? Text { get; set; }
+    private int count;
+
+    private void Increment()
+    {
+        count++;
+    }
+}

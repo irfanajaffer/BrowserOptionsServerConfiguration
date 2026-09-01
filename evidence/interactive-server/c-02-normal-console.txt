@@ -1,0 +1,13 @@
+Browser console capture
+Captured: 2026-08-31
+URL: http://localhost:5144/counter
+Configured request LogLevel: Information
+Observation window: full reload plus 2.5 seconds
+Console/page-error event count: 3 (2 info, 1 error)
+
+INFO  [2026-08-31T05:26:21.968Z] Information: Normalizing '_blazor' to 'http://localhost:5144/_blazor'.
+INFO  [2026-08-31T05:26:21.984Z] Information: WebSocket connected to ws://localhost:5144/_blazor?id=<redacted>.
+ERROR Cannot read properties of null (reading 'addEventListener')
+      at /Components/Layout/ReconnectModal.abdmv1u4y3.razor.js:3:16
+
+Network resource observation included /_blazor/initializers and /_blazor/negotiate?negotiateVersion=1.
