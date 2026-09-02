@@ -47,7 +47,7 @@ Retained evidence:
 - c-04-detailed.png: detailed request page capture
 - c-04-normal-console.txt: normal request console/network summary
 - c-04-detailed-console.txt: detailed request console/network summary
-- c-04-test-procedure.md: repeatable scenario procedure and criteria
+- ../README.md: manual validation procedures and criteria
 
 Known unrelated page error in both runs:
 - ReconnectModal.razor.js attempted to call addEventListener on null.

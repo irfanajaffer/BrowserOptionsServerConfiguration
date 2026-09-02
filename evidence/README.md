@@ -1,54 +1,103 @@
-# BrowserOptions validation evidence
+# Run and validate the BrowserOptions samples
 
-Final evidence set for [dotnet/aspnetcore#68815](https://github.com/dotnet/aspnetcore/issues/68815).
+## Prerequisites
 
-## Status
+- Windows
+- A Chromium-based browser with developer tools
+- .NET SDK `11.0.100-preview.7.26381.103`, selected by the repository `global.json`
 
-- **Overall result:** PASS
-- **SDK under test:** `11.0.100-preview.7.26381.103`
-- **Execution date:** 2026-09-01
-- **Scope:** Static SSR, Interactive Server, Interactive Auto, and a multiple-server-instance proxy scenario
-- **API limitation:** `BrowserOptions.GetBrowserOptions(HttpContext)` is not exposed by the pinned SDK. That documentation-specific readback check is **Not testable** and is not claimed as passed. Effective behavior was validated through browser output and isolation tests.
+Run all commands from the repository root. Run one sample at a time.
 
-## Retained evidence
+## Build the samples
 
-### Environment
+```powershell
+dotnet build .\BlazorStaticSSR\BlazorStaticSSR.slnx -nologo -v:minimal
+dotnet build .\BlazorServerApp\BlazorServerApp.slnx -nologo -v:minimal
+dotnet build .\BlazorAppAuto\BlazorAppAuto.slnx -nologo -v:minimal
+```
 
-- `sdk-info.txt` — SDK and runtime information.
+### Expected outcome
 
-### Static SSR
+All three solutions build successfully.
 
-- `static-ssr/g-02-static-ssr-build.txt` — successful build.
-- `static-ssr/c-01-endpoint-loglevel-console.txt` — endpoint logging behavior.
-- `static-ssr/c-03-detailed-console.txt` — request-level detailed logging behavior.
-- `static-ssr/Information vs Trace logging comparison.png` — normal/detailed comparison and override precedence.
-- `static-ssr/preserved-DOM.png` — `PreserveDom = true` result.
-- `static-ssr/replaced DOM.png` — `PreserveDom = false` result.
+## Static SSR
 
-### Interactive Server
+1. Start the sample:
 
-- `interactive-server/g-03-interactive-server-build.txt` — successful build.
-- `interactive-server/c-02-normal-console.txt` — endpoint logging behavior.
-- `interactive-server/c-03-detailed-console.txt` — request-level override behavior.
-- `interactive-server/c-04-two-visitors.png` — concurrent normal/detailed visitor comparison.
-- `interactive-server/c-04-two-visitors-assessment.txt` — request-isolation assessment.
-- `interactive-server/Screenshot 2026-08-31 171510.png` — custom reconnect dialog.
-- `interactive-server/Screen Recording 2026-09-01 103247.mp4` — configured retry behavior and recovery.
-- `interactive-server/multi-instance-proxy-side-by-side.png` — side-by-side multi-instance result.
-- `interactive-server/multi-instance-proxy-results.json` — structured multi-instance result.
-- `interactive-server/multi-instance-proxy-test-procedure.md` — multi-instance procedure and acceptance criteria.
-- `interactive-server/multi-instance-proxy-validation.js` — reproducible validation script.
+   ```powershell
+   dotnet run --project .\BlazorStaticSSR\BlazorStaticSSR\BlazorStaticSSR.csproj --launch-profile http --no-build
+   ```
 
-### Interactive Auto
+2. Open these URLs in separate browser profiles:
+   - Normal: `http://localhost:5003/`
+   - Detailed: `http://localhost:5003/?detailed=true`
+3. Enable **Verbose** output in both browser consoles and reload both pages.
+4. On the Home page, wait approximately three seconds for the streaming update.
+5. Confirm that the fixture reports **REPLACED** with the current `Program.PreserveDom = false` setting.
+6. Select **Weather**, then **Home**.
+7. Stop the sample with **Ctrl+C**.
+8. Change `Program.PreserveDom` to `true`, rebuild the Static SSR solution, rerun the sample, and wait for the streaming update.
+9. Confirm that the fixture now reports **PRESERVED**, then stop the sample.
 
-- `interactive-auto/g-04-interactive-auto-build.txt` — successful build.
-- `interactive-auto/c-07-normal-console.txt` — normal first-visit browser output.
-- `interactive-auto/c-07-detailed-console.txt` — detailed request override output.
-- `interactive-auto/network-tab-cached-reload.png` — cached WebAssembly reload evidence.
-- `interactive-auto/interactive-auto-cached-reload-reconnect.webm` — cached WebAssembly remains interactive without server reconnect UI.
-- `interactive-auto/interactive-auto-validation.js` — reproducible Auto transition validation script.
-- `interactive-auto/interactive-auto-results.json` — structured Auto transition result.
+### Expected outcomes
 
-## Disposition of the documented readback API
+- The normal request reports `LogLevel.Information`.
+- The detailed request reports `LogLevel.Trace`.
+- The two requests retain their own logging values.
+- The streaming fixture reports **REPLACED** with `PreserveDom = false` and **PRESERVED** with `PreserveDom = true`.
+- Navigation between Weather and Home completes successfully.
 
-The pinned Preview 7 SDK does not provide `BrowserOptions.GetBrowserOptions(HttpContext)`. The samples therefore do not present supplied component values as framework API readback. This item is recorded as **Not testable in the pinned SDK**, while the available BrowserOptions behavior is recorded as **PASS**.
+## Interactive Server
+
+1. Start the sample:
+
+   ```powershell
+   dotnet run --project .\BlazorServerApp\BlazorServerApp\BlazorServerApp.csproj --launch-profile http --no-build
+   ```
+
+2. Open these URLs in separate browser profiles:
+   - Normal: `http://localhost:5144/counter`
+   - Detailed: `http://localhost:5144/counter?detailed=true`
+3. Enable **Verbose** output in both browser consoles.
+4. Select **Click me** on both pages and confirm that both counters increase.
+5. In each Network panel, confirm that a `/_blazor` WebSocket is active.
+6. Stop the server with **Ctrl+C** and leave the pages open.
+7. Observe the reconnect dialog and retry attempts.
+8. Start the same command again before all retries are exhausted.
+9. Stop the sample with **Ctrl+C** when validation is complete.
+
+### Expected outcomes
+
+- The normal request reports `normal` and `LogLevel.Warning`.
+- The detailed request reports `detailed` and `LogLevel.Trace`.
+- Both pages remain independently interactive without request-value leakage.
+- The custom validation reconnect dialog appears after server shutdown.
+- Three reconnect attempts occur at approximately five-second intervals.
+- Restarting the server before retries are exhausted closes the dialog and restores the connection.
+
+## Interactive Auto
+
+1. Clear site data, including Cache Storage, for `http://localhost:5058`.
+2. Start the sample:
+
+   ```powershell
+   dotnet run --project .\BlazorAppAuto\BlazorAppAuto\BlazorAppAuto\BlazorAppAuto.csproj --launch-profile http --no-build
+   ```
+
+3. Open `http://localhost:5058/counter` and select **Click me**.
+4. In the Network panel, confirm that a `/_blazor` WebSocket is active on the fresh visit.
+5. Open `http://localhost:5058/counter?detailed=true` in a separate browser profile with cleared site data.
+6. Compare the normal and detailed browser-console output.
+7. Reload the normal counter page and wait for all WebAssembly resources to finish downloading.
+8. Reload it again without clearing site data.
+9. Confirm that the counter is WebAssembly-backed and no `/_blazor` WebSocket is active. If it is still Server-backed, wait for downloads to finish and reload again.
+10. Stop the server with **Ctrl+C**, then use the counter again.
+
+### Expected outcomes
+
+- The normal request reports `LogLevel.Information`.
+- The detailed request reports `LogLevel.Trace`.
+- The fresh Auto visit is Server-backed and interactive.
+- A later reload uses cached WebAssembly resources without an active `/_blazor` WebSocket.
+- After server shutdown, the cached WebAssembly counter remains interactive.
+- The reconnect dialog does not appear while the counter is WebAssembly-backed.
