@@ -1,5 +1,5 @@
 // Set up event handlers
-const reconnectModal = document.getElementById("components-reconnect-modal");
+const reconnectModal = document.getElementById("validation-reconnect-modal");
 reconnectModal.addEventListener("components-reconnect-state-changed", handleReconnectStateChanged);
 
 const retryButton = document.getElementById("components-reconnect-button");

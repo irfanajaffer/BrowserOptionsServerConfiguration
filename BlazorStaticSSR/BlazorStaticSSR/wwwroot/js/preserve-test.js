@@ -12,12 +12,12 @@
     badge.id = "preserve-test-result";
     badge.style.cssText = "position:fixed;right:1rem;bottom:1rem;z-index:1000;padding:.75rem;" +
         "border-radius:.375rem;background:#212529;color:#fff;font:14px system-ui";
-    badge.textContent = "Waiting for streamed SSR update…";
+    badge.textContent = "Use the test link to start enhanced navigation";
     document.body.appendChild(badge);
 
-    const observer = new MutationObserver(() => {
+    Blazor.addEventListener("enhancedload", () => {
         const currentElement = document.getElementById("preserve-test");
-        if (!currentElement?.textContent.includes("Final streamed SSR content")) {
+        if (!currentElement?.textContent.includes("Enhanced navigation destination content")) {
             return;
         }
 
@@ -28,12 +28,12 @@
         };
 
         window.preserveDomTestResult = result;
+        if (!badge.isConnected) {
+            document.body.appendChild(badge);
+        }
         badge.textContent = result.sameNode
             ? "PRESERVED: same DOM node and client state"
             : "REPLACED: a new DOM node was created";
         badge.style.background = result.sameNode ? "#146c43" : "#b02a37";
-        observer.disconnect();
     });
-
-    observer.observe(document, { childList: true, subtree: true, characterData: true });
 })();

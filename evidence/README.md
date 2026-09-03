@@ -1,5 +1,12 @@
 # Run and validate the BrowserOptions samples
 
+The procedures below describe the expected behavior from issue #68815. The current observed result
+is **partially passed with documented failures**: reconnect and Interactive Auto mode-transition
+tests passed, while normal-versus-detailed logging and feature-only `PreserveDom` inverse behavior
+failed. Concurrent and proxy tests were completed, but effective BrowserOptions isolation is
+inconclusive because logging did not differ. See
+[the canonical report](68815-BrowserOptions-Full-Report.md) for the result matrix.
+
 ## Prerequisites
 
 - Windows
@@ -31,6 +38,8 @@ All three solutions build successfully.
 2. Open these URLs in separate browser profiles:
    - Normal: `http://localhost:5003/`
    - Detailed: `http://localhost:5003/?detailed=true`
+   Alternatively, use the **Warning** and **Trace** browser logging links in the sample. Each link
+   opens a new tab and forces a full document load.
 3. Enable **Verbose** output in both browser consoles and reload both pages.
 4. On the Home page, wait approximately three seconds for the streaming update.
 5. Confirm that the fixture reports **REPLACED** with the current `Program.PreserveDom = false` setting.
@@ -39,9 +48,9 @@ All three solutions build successfully.
 8. Change `Program.PreserveDom` to `true`, rebuild the Static SSR solution, rerun the sample, and wait for the streaming update.
 9. Confirm that the fixture now reports **PRESERVED**, then stop the sample.
 
-### Expected outcomes
+### Expected outcomes from issue guidance
 
-- The normal request reports `LogLevel.Information`.
+- The normal request reports `LogLevel.Warning`.
 - The detailed request reports `LogLevel.Trace`.
 - The two requests retain their own logging values.
 - The streaming fixture reports **REPLACED** with `PreserveDom = false` and **PRESERVED** with `PreserveDom = true`.
@@ -58,6 +67,8 @@ All three solutions build successfully.
 2. Open these URLs in separate browser profiles:
    - Normal: `http://localhost:5144/counter`
    - Detailed: `http://localhost:5144/counter?detailed=true`
+   Alternatively, use the **Warning** and **Trace** browser logging links in the sample. Each link
+   opens a new tab and forces a full document load.
 3. Enable **Verbose** output in both browser consoles.
 4. Select **Click me** on both pages and confirm that both counters increase.
 5. In each Network panel, confirm that a `/_blazor` WebSocket is active.
@@ -66,7 +77,7 @@ All three solutions build successfully.
 8. Start the same command again before all retries are exhausted.
 9. Stop the sample with **Ctrl+C** when validation is complete.
 
-### Expected outcomes
+### Expected outcomes from issue guidance
 
 - The normal request reports `normal` and `LogLevel.Warning`.
 - The detailed request reports `detailed` and `LogLevel.Trace`.
@@ -87,15 +98,17 @@ All three solutions build successfully.
 3. Open `http://localhost:5058/counter` and select **Click me**.
 4. In the Network panel, confirm that a `/_blazor` WebSocket is active on the fresh visit.
 5. Open `http://localhost:5058/counter?detailed=true` in a separate browser profile with cleared site data.
+   The **Warning** and **Trace** browser logging links can generate these variants without manually
+   editing the query string; use separate fresh profiles when validating Auto startup behavior.
 6. Compare the normal and detailed browser-console output.
 7. Reload the normal counter page and wait for all WebAssembly resources to finish downloading.
 8. Reload it again without clearing site data.
 9. Confirm that the counter is WebAssembly-backed and no `/_blazor` WebSocket is active. If it is still Server-backed, wait for downloads to finish and reload again.
 10. Stop the server with **Ctrl+C**, then use the counter again.
 
-### Expected outcomes
+### Expected outcomes from issue guidance
 
-- The normal request reports `LogLevel.Information`.
+- The normal request reports `LogLevel.Warning`.
 - The detailed request reports `LogLevel.Trace`.
 - The fresh Auto visit is Server-backed and interactive.
 - A later reload uses cached WebAssembly resources without an active `/_blazor` WebSocket.

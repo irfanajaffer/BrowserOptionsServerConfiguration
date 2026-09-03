@@ -16,17 +16,12 @@
 
 <body>
     <ConfigureBrowser Options="@RequestBrowserOptions" />
-    <div class="alert alert-info m-3" id="browser-options-diagnostics" role="status">
-        <strong>BrowserOptions request isolation:</strong>
-        server instance: <span id="server-instance">@ServerInstance</span>;
-        Variant: <span id="request-variant">@RequestVariant</span>;
-        per-request LogLevel supplied to ConfigureBrowser:
-        <span id="configured-log-level">@RequestBrowserOptions.LogLevel</span>;
-        URL: <span id="request-url">@RequestUrl</span>;
-        request host: <span id="request-host">@HttpContext.Request.Host</span>;
-        proxy host: <span id="proxy-host">@ProxyHost</span>;
-        request ID: <span id="request-id">@HttpContext.TraceIdentifier</span>
-    </div>
+
+    <nav class="alert alert-secondary mx-3 d-flex align-items-center gap-2" aria-label="Browser logging test">
+        <strong>Browser logging:</strong>
+        <a class="btn btn-outline-secondary btn-sm" href="@NormalLoggingUrl" target="_blank" data-enhance-nav="false">Warning</a>
+        <a class="btn btn-outline-secondary btn-sm" href="@DetailedLoggingUrl" target="_blank" data-enhance-nav="false">Trace</a>
+    </nav>
     <Routes />
     <ReconnectModal />
     <script src="@Assets["_framework/blazor.web.js"]"></script>
@@ -43,8 +38,14 @@
 
     private BrowserOptions RequestBrowserOptions => new()
     {
-      LogLevel = IsDetailedRequest ? LogLevel.Trace : LogLevel.Warning
+        LogLevel = IsDetailedRequest ? LogLevel.Trace : LogLevel.Warning
     };
+
+    private string NormalLoggingUrl =>
+        $"{HttpContext.Request.PathBase}{HttpContext.Request.Path}";
+
+    private string DetailedLoggingUrl =>
+        $"{NormalLoggingUrl}{QueryString.Create("detailed", "true")}";
 
     private string RequestVariant => IsDetailedRequest ? "detailed" : "normal";
 

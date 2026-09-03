@@ -1,29 +1,24 @@
-@attribute [StreamRendering]
-
 <div id="preserve-test" tabindex="0" class="border p-2 my-3">
-    @if (_isLoading)
+    @if (IsDestination)
     {
-        <span>Initial SSR content (waiting for streamed update)</span>
+        <span>Enhanced navigation destination content</span>
     }
     else
     {
-        <span>Final streamed SSR content: @_completedAt</span>
+        <span>Enhanced navigation source content</span>
     }
 </div>
 
-<p>
-    The test takes three seconds. The result badge in the lower-right corner reports whether
-    this DOM node survived the streamed update.
-</p>
+@if (!IsDestination)
+{
+    <p><a href="preserve-result">Run enhanced navigation test</a></p>
+}
+else
+{
+    <p><a href="">Return to test start</a></p>
+}
 
 @code {
-    private bool _isLoading = true;
-    private string? _completedAt;
-
-    protected override async Task OnInitializedAsync()
-    {
-        await Task.Delay(TimeSpan.FromSeconds(3));
-        _completedAt = DateTimeOffset.Now.ToString("O");
-        _isLoading = false;
-    }
+    [Parameter]
+    public bool IsDestination { get; set; }
 }

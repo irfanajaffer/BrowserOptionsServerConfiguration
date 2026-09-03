@@ -16,6 +16,11 @@
 
 <body>
     <ConfigureBrowser Options="@RequestBrowserOptions" />
+    <nav class="alert alert-secondary m-3 d-flex align-items-center gap-2" aria-label="Browser logging test">
+        <strong>Browser logging:</strong>
+        <a class="btn btn-outline-secondary btn-sm" href="@NormalLoggingUrl" target="_blank" data-enhance-nav="false">Warning</a>
+        <a class="btn btn-outline-secondary btn-sm" href="@DetailedLoggingUrl" target="_blank" data-enhance-nav="false">Trace</a>
+    </nav>
     <Routes />
     <ReconnectModal />
     <script src="@Assets["_framework/blazor.web.js"]"></script>
@@ -29,8 +34,14 @@
 
     private BrowserOptions RequestBrowserOptions => new()
     {
-        LogLevel = IsDetailedRequest ? LogLevel.Trace : LogLevel.Information
+        LogLevel = IsDetailedRequest ? LogLevel.Trace : LogLevel.Warning
     };
+
+    private string NormalLoggingUrl =>
+        $"{HttpContext.Request.PathBase}{HttpContext.Request.Path}";
+
+    private string DetailedLoggingUrl =>
+        $"{NormalLoggingUrl}{QueryString.Create("detailed", "true")}";
 
     private bool IsDetailedRequest =>
         HttpContext.Request.Query.TryGetValue("detailed", out var queryValue) &&

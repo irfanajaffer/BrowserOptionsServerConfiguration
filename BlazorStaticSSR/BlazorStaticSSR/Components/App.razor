@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿ <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -16,12 +16,14 @@
 
 <body>
     <ConfigureBrowser Options="@RequestBrowserOptions" />
+    <nav class="alert alert-secondary m-3 d-flex align-items-center gap-2" aria-label="Browser logging test">
+        <strong>Browser logging:</strong>
+        <a class="btn btn-outline-secondary btn-sm" href="@NormalLoggingUrl" target="_blank" data-enhance-nav="false">Warning</a>
+        <a class="btn btn-outline-secondary btn-sm" href="@DetailedLoggingUrl" target="_blank" data-enhance-nav="false">Trace</a>
+    </nav>
     <Routes />
+    <script src="@Assets["_framework/blazor.web.js"]"></script>
     <script src="@Assets["js/preserve-test.js"]"></script>
-    <script src="@Assets["_framework/blazor.web.js"]" autostart="false"></script>
-    @* Preview 7 doesn't emit WithBrowserOptions into the response, so pass the same
-       test setting directly until that preview issue is fixed. *@
-    <script>Blazor.start({ ssr: { disableDomPreservation: @(Program.PreserveDom ? "false" : "true") } });</script>
 </body>
 
 </html>
@@ -32,11 +34,18 @@
 
     private BrowserOptions RequestBrowserOptions => new()
     {
-        LogLevel = IsDetailedRequest ? LogLevel.Trace : LogLevel.Information
+        LogLevel = IsDetailedRequest ? LogLevel.Trace : LogLevel.Warning,
+        Ssr = { PreserveDom = Program.PreserveDom }
     };
 
+    private string NormalLoggingUrl =>
+        $"{HttpContext.Request.PathBase}{HttpContext.Request.Path}";
+
+    private string DetailedLoggingUrl =>
+        $"{NormalLoggingUrl}{QueryString.Create("detailed", "true")}";
+
     private bool IsDetailedRequest =>
-        HttpContext.Request.Query.TryGetValue("detailed", out var queryValue) &&
+        HttpContext.Request.Query.TryGetValue(key: "detailed", out var queryValue) &&
             string.Equals(queryValue, "true", StringComparison.OrdinalIgnoreCase) ||
         HttpContext.Request.Headers.TryGetValue("X-Detailed-Logging", out var headerValue) &&
             string.Equals(headerValue, "true", StringComparison.OrdinalIgnoreCase);

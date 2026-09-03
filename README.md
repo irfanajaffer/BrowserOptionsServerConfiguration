@@ -40,6 +40,30 @@ dotnet run --project .\BlazorAppAuto\BlazorAppAuto\BlazorAppAuto\BlazorAppAuto.c
 
 Run one application at a time. Open normal and detailed URLs in separate browser profiles and enable **Verbose** Console output.
 
+### Multi-instance proxy sample
+
+The Interactive Server solution includes a YARP proxy for manual multi-instance isolation testing.
+Start each command in a separate terminal from the repository root:
+
+```powershell
+dotnet run --project .\BlazorServerApp\BlazorServerApp\BlazorServerApp.csproj --launch-profile backend-a
+dotnet run --project .\BlazorServerApp\BlazorServerApp\BlazorServerApp.csproj --launch-profile backend-b
+dotnet run --project .\BlazorServerApp\BlazorServerApp.Proxy\BlazorServerApp.Proxy.csproj --launch-profile proxy
+```
+
+Confirm `http://127.0.0.1:5200/proxy-health`, then open these through the proxy in separate fresh
+browser profiles:
+
+- normal: `http://127.0.0.1:5200/counter`
+- detailed: `http://127.0.0.1:5200/counter?detailed=true`
+
+Ordinary HTTP requests use round-robin routing without affinity. Requests under `/_blazor`,
+including negotiation and WebSockets, use the `.BrowserOptions.Proxy.Affinity` cookie. Record the
+rendered server instance and request ID, the `X-Server-Instance` response header, the `/_blazor`
+WebSocket ID, and the Blazor console output for each profile. The rendered `LogLevel` is fixture
+input only; effective isolation must be decided from the browser logging difference described in
+the evidence procedure.
+
 ## How to verify
 
 ```powershell
@@ -71,8 +95,19 @@ Explicit Interactive WebAssembly, standalone Blazor WebAssembly, and Blazor Hybr
 ## Evidence
 
 - Manual validation steps and expected outcomes: [`evidence/README.md`](evidence/README.md)
+- Canonical validation report: [`evidence/68815-BrowserOptions-Full-Report.md`](evidence/68815-BrowserOptions-Full-Report.md)
 - Static SSR evidence: [`evidence/static-ssr/`](evidence/static-ssr/)
 - Interactive Server evidence: [`evidence/interactive-server/`](evidence/interactive-server/)
 - Interactive Auto evidence: [`evidence/interactive-auto/`](evidence/interactive-auto/)
 
-The tested SDK does not expose `BrowserOptions.GetBrowserOptions(HttpContext)`. API readback is therefore **Not testable** and is not claimed as passed; the available browser behavior passed validation.
+## Current validation status
+
+The overall result is **partially passed with documented failures**. Configured reconnect behavior,
+the default reconnect comparison, proxy routing/affinity, and the Interactive Auto execution-mode
+transition passed. Normal-versus-detailed browser logging and feature-only `PreserveDom` inverse
+behavior failed. Direct and proxy effective BrowserOptions isolation remain inconclusive because
+browser logging did not provide an observable distinction.
+
+The tested SDK does not expose `BrowserOptions.GetBrowserOptions(HttpContext)`. Effective API
+readback is therefore **not verifiable** and is not claimed as passed. See the canonical validation
+report for the complete pass, fail, inconclusive, not-verifiable, and out-of-scope matrix.
