@@ -30,5 +30,5 @@ app.Run();
 public partial class Program
 {
     // Change this single value to run the PreserveDom=true/false A/B test.
-    public const bool PreserveDom = true;
+    public const bool PreserveDom = false;
 }
