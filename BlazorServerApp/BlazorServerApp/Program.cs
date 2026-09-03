@@ -28,6 +28,13 @@ app.UseHttpsRedirection();
 app.MapStaticAssets();
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode()
-    ;
+    .WithBrowserOptions(options =>
+    {
+        options.LogLevel = LogLevel.Warning;
+        options.Server.ReconnectionMaxRetries = 3;
+        options.Server.ReconnectionRetryInterval = TimeSpan.FromSeconds(5);
+        options.Server.ReconnectionDialogId = "validation-reconnect-modal";
+        options.Ssr.PreserveDom = true;
+    });
 
 app.Run();
