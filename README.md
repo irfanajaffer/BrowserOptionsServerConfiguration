@@ -95,7 +95,7 @@ Explicit Interactive WebAssembly, standalone Blazor WebAssembly, and Blazor Hybr
 ## Evidence
 
 - Manual validation steps and expected outcomes: [`evidence/README.md`](evidence/README.md)
-- Canonical validation report: [`evidence/68815-BrowserOptions-Full-Report.md`](evidence/68815-BrowserOptions-Full-Report.md)
+- Canonical validation report: [`evidence/68815-BrowserOptions-Full-Report.docx`](evidence/68815-BrowserOptions-Full-Report.docx)
 - Static SSR evidence: [`evidence/static-ssr/`](evidence/static-ssr/)
 - Interactive Server evidence: [`evidence/interactive-server/`](evidence/interactive-server/)
 - Interactive Auto evidence: [`evidence/interactive-auto/`](evidence/interactive-auto/)
