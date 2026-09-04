@@ -5,6 +5,18 @@ public API. The Home page marks a DOM node with client-only state. Following the
 enhanced navigation to `/preserve-result`, which renders the corresponding destination node. The
 browser helper reports whether the original node and its client-only state survived.
 
+## Validation result
+
+The corrected enhanced-navigation fixture was rerun with both option values:
+
+- `PreserveDom=true`: **Passed**. The same DOM node and client state were preserved.
+- `PreserveDom=false`: **Failed**. The DOM node and client state were still preserved instead of
+  being replaced.
+- Inverse behavior: **Failed**. Both values produced the same preserved-node result.
+
+The original comparison was invalid because `/preserve-result` did not exist. The corrected fixture
+renders `<PreserveTest IsDestination="true" />` at that route before evaluating node identity.
+
 ## Prerequisites
 
 - .NET 11 SDK
@@ -20,9 +32,9 @@ browser helper reports whether the original node and its client-only state survi
 2. Build and run the project.
 3. Open the Home page in a fresh browser tab.
 4. Select **Run enhanced navigation test**. Do not reload or open the destination directly.
-5. Compare behavior between the two runs:
-   - `true`: green **PRESERVED** badge; the same element, client marker, and focus survive.
-   - `false`: red **REPLACED** badge; the original element is removed and a new one is inserted.
+5. Compare the expected behavior between the two runs:
+  - `true`: green **PRESERVED** badge; the same element and client marker survive.
+  - `false`: red **REPLACED** badge; the original element is removed and a new one is inserted.
 6. For an exact result, run this in the browser console after the final content appears:
 
    `window.preserveDomTestResult`
@@ -37,5 +49,5 @@ browser helper reports whether the original node and its client-only state survi
   server output.
 - The sample uses only `WithBrowserOptions` to configure `Ssr.PreserveDom`. The JavaScript helper
   observes node identity and client state but does not configure Blazor or call `Blazor.start`.
-- If the configured value is not emitted or the observed DOM behavior does not change between the
-  two runs, record the feature as not verifiable with this SDK. Do not add a JavaScript fallback.
+- The corrected rerun produced preserved-node results for both values. This passes the `true` case
+  but fails the `false` case and required inverse behavior. Do not add a JavaScript fallback.

@@ -1,11 +1,21 @@
 # Run and validate the BrowserOptions samples
 
-The procedures below describe the expected behavior from issue #68815. The current observed result
-is **partially passed with documented failures**: reconnect and Interactive Auto mode-transition
-tests passed, while normal-versus-detailed logging and feature-only `PreserveDom` inverse behavior
-failed. Concurrent and proxy tests were completed, but effective BrowserOptions isolation is
-inconclusive because logging did not differ. See
-[the canonical report](68815-BrowserOptions-Full-Report.md) for the result matrix.
+The procedures below describe the expected behavior from issue #68815.
+
+**Validation status: `PreserveDom` rerun completed; report correction required before submission.**
+
+The original validation used commit
+`ebc7922175650b20cf1f30cac7b41683742755b9` (`additional evidences committed`). Its reconnect and
+Interactive Auto conclusions are supported, and the browser logging problem is reproducible.
+However, that commit has no routed `/preserve-result` destination, so its `PreserveDom` conclusions
+are invalid. The corrected destination fixture was rerun with both values. `PreserveDom=true`
+passed by preserving node identity and client state. `PreserveDom=false` failed because it also
+preserved the node, so the required inverse behavior failed. Before submission, commit the
+corrected fixture and record that exact rerun commit in the report.
+
+See the committed [full validation report](68815-BrowserOptions-Full-Report.docx). The report must
+be corrected manually to identify the original tested commit, identify the corrected rerun commit,
+and replace its invalid original `PreserveDom` result with the rerun outcome above.
 
 ## Prerequisites
 
@@ -41,20 +51,30 @@ All three solutions build successfully.
    Alternatively, use the **Warning** and **Trace** browser logging links in the sample. Each link
    opens a new tab and forces a full document load.
 3. Enable **Verbose** output in both browser consoles and reload both pages.
-4. On the Home page, wait approximately three seconds for the streaming update.
-5. Confirm that the fixture reports **REPLACED** with the current `Program.PreserveDom = false` setting.
-6. Select **Weather**, then **Home**.
+4. On the Home page, select **Run enhanced navigation test**. Do not reload or open the destination directly.
+5. Confirm that `/preserve-result` renders and the fixture reports **REPLACED** with the current
+   `Program.PreserveDom = false` setting.
+6. In the browser console, record `window.preserveDomTestResult`.
 7. Stop the sample with **Ctrl+C**.
-8. Change `Program.PreserveDom` to `true`, rebuild the Static SSR solution, rerun the sample, and wait for the streaming update.
-9. Confirm that the fixture now reports **PRESERVED**, then stop the sample.
+8. Change `Program.PreserveDom` to `true`, rebuild the Static SSR solution, rerun the sample, and
+   repeat the enhanced navigation from Home.
+9. Confirm that the fixture now reports **PRESERVED**, record `window.preserveDomTestResult`, then
+   stop the sample.
 
 ### Expected outcomes from issue guidance
 
 - The normal request reports `LogLevel.Warning`.
 - The detailed request reports `LogLevel.Trace`.
 - The two requests retain their own logging values.
-- The streaming fixture reports **REPLACED** with `PreserveDom = false` and **PRESERVED** with `PreserveDom = true`.
-- Navigation between Weather and Home completes successfully.
+- The enhanced-navigation fixture reports **REPLACED** with `PreserveDom = false` and **PRESERVED**
+   with `PreserveDom = true`.
+- Navigation from Home to `/preserve-result` completes successfully.
+
+### Observed corrected rerun
+
+- `PreserveDom=true`: **Passed**. Node identity and client state were preserved.
+- `PreserveDom=false`: **Failed**. Node identity and client state were still preserved.
+- Inverse behavior: **Failed**. Both values produced the preserved-node result.
 
 ## Interactive Server
 
