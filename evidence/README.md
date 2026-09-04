@@ -1,21 +1,5 @@
 # Run and validate the BrowserOptions samples
 
-The procedures below describe the expected behavior from issue #68815.
-
-**Validation status: `PreserveDom` rerun completed; report correction required before submission.**
-
-The original validation used commit
-`ebc7922175650b20cf1f30cac7b41683742755b9` (`additional evidences committed`). Its reconnect and
-Interactive Auto conclusions are supported, and the browser logging problem is reproducible.
-However, that commit has no routed `/preserve-result` destination, so its `PreserveDom` conclusions
-are invalid. The corrected destination fixture was rerun with both values. `PreserveDom=true`
-passed by preserving node identity and client state. `PreserveDom=false` failed because it also
-preserved the node, so the required inverse behavior failed. Before submission, commit the
-corrected fixture and record that exact rerun commit in the report.
-
-See the committed [full validation report](68815-BrowserOptions-Full-Report.docx). The report must
-be corrected manually to identify the original tested commit, identify the corrected rerun commit,
-and replace its invalid original `PreserveDom` result with the rerun outcome above.
 
 ## Evidence catalog
 
